@@ -19,9 +19,9 @@ function setup(){
     tower = new Tower(150,350,160,310);
     cannon = new Cannon(120, 115, 130, 100,-PI/4)
     ground = new Ground(600,height - 20,1800,20);
-    var cannonBallx = cannon.x +cannon.width/2;
+  
     var cannonBally = cannon.y +cannon.height/2
-    cannonBall = new CannonBall(cannonBallx,cannonBally);
+    cannonBall = new CannonBall(cannon.x+65,cannonBally);
 }
 
 function draw(){

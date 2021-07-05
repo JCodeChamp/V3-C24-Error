@@ -16,18 +16,18 @@ class CannonBall{
     display(){
         var angle = this.body.angle;
         var pos = this.body.position;
-        //console.log(this.body);
-        console.log(this.body.velocity.x+ "," + this.body.velocity.y)
-        console.log(this.body.position.x+ "," + this.body.position.y)
         push();
-        translate(pos.x,pos.y);
+        translate(pos.x, pos.y);
         rotate(angle);
         imageMode(CENTER);
-        image(this.image, 0,0,this.r,this.r);
+        image(this.image, 0, 0, this.r, this.r);
         pop();
     }
 
     shoot(){
-        Matter.Body.setVelocity(this.body,{x: 50,y :-30 });
+        var velocity = p5.Vector.fromAngle(cannon.angle-0.4);
+        velocity.mult(20);
+        Matter.Body.setStatic(this.body, false);
+        Matter.Body.setVelocity(this.body, { x: velocity.x, y: velocity.y });
     }
 }
