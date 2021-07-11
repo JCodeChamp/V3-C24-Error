@@ -17,11 +17,11 @@ class Cannon{
         }
         //console.log(this.angle);
         push();
-        translate(this.x+65,160);
+        translate(this.x,this.y);
         rotate(this.angle);
         imageMode(CENTER);
-        image(this.cannonImg,0, 0,90,90);  
+        image(this.cannonImg,0, 0,this.width,this.height);  
         pop();
-        image(this.cannonBaseImg,this.x,this.y,this.width,this.height);
+        image(this.cannonBaseImg,45,25,240,200);
     }
 }
