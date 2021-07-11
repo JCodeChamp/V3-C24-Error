@@ -16,12 +16,12 @@ function setup(){
 
     world = engine.world;
    
-    tower = new Tower(150,350,160,310);
-    cannon = new Cannon(120, 115, 130, 100,-PI/4)
+   tower = new Tower(150, 350, 160, 310);
+    cannon = new Cannon(155, 130, 220, 150, -PI/4);
     ground = new Ground(600,height - 20,1800,20);
-  
-    var cannonBally = cannon.y +cannon.height/2
-    cannonBall = new CannonBall(cannon.x+65,cannonBally);
+
+  //  var cannonBally = cannon.y +cannon.height/2
+    cannonBall = new CannonBall(cannon.x,cannon.y);
 }
 
 function draw(){
